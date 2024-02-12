@@ -1,0 +1,40 @@
+body {
+  background-color: lightgray;
+  text-align: justify;
+  color:darkseagreen;
+}
+
+h1 {
+  font-family: sans-serif;
+  color:green;
+  border-bottom-style: dotted;
+}
+
+h2 {
+  font-family: sans-serif;
+  color: green;
+}
+
+img {
+  float: right;
+  width: 269px;
+  height: 169px;
+  margin: 100px;
+  margin-bottom: 10px;
+  margin-top:15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-color: #da8800;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 10px;
+  border-style: dotted;
+}
+
+p {
+  text-align: left;
+  font-family: fantasy;
+  width: 369px;
+  font-size: 14px;
+  color:black;
+}

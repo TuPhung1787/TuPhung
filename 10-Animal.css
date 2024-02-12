@@ -1,0 +1,45 @@
+body {
+  background: #e9d0d0;
+}
+
+.header {
+  text-align: center;
+}
+
+h1 {
+  color: green;
+  font-size: 39px;
+  font-family: 'Arial','Times New Roman',sans-serif;
+}
+
+.section-title {
+  color: green;
+  font-size: 26px;
+  font-family: 'Times New Roman', 'Arial', serif;
+  text-decoration: underline;
+}
+
+.sub-title {
+  font-family: 'Times New Roman', 'Arial', serif;
+  text-decoration: inherit;
+}
+.image-source {
+  color: gray;
+  font-size: 15px;
+}
+
+.paragraph {
+  color: blue;
+  font-family: 'Arial','Times New Roman', sans-serif;
+  font-size: 20px;
+  clear: both;
+}
+
+.image {
+  float: left;
+  width: 300px;
+  border-style: dotted;
+  border-color: azure;
+  border-radius: 18px;
+  margin: 0 10px 10px 0;
+}

@@ -72,4 +72,5 @@ body {
 .image-left-icon {
     width: 20px; /* Set the width of the icon */
     height: auto; /* Auto adjust height to maintain aspect ratio */
+    margin: 20px 0 20px 0;
 }

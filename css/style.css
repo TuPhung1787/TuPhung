@@ -1,39 +1,47 @@
 body {
   background: white;
+  font-family: Arial, sans-serif; /* Use a common font for better cross-browser compatibility */
 }
+
 p {
   color: black;
 }
+
 h1 {
   font-weight: bold;
   text-align: center;
   font-size: 69px;
-  color:blue;
+  color: blue;
 }
-.image-left {
+
+/* Styles for all image classes */
+.image-left, .image-right, .image-center, .image-left-icon, .image-right-icon {
+  border: 2px dotted azure; /* Simplified border style */
+  border-radius: 18px;
+  margin-bottom: 5px; /* Adjust margin for better spacing */
+}
+
+/* Styles for left-aligned images */
+.image-left, .image-left-icon {
   float: left;
-  width: 300px;
-  height:200px;
-  border-style: dotted;
-  border-color: azure;
-  border-radius: 18px;
-  margin: 0 5px 5px 0;
+  margin-right: 5px; /* Add right margin to avoid overlapping */
 }
-.image-right {
+
+/* Styles for right-aligned images */
+.image-right, .image-right-icon {
   float: right;
-  width: 300px;
-  height:200px;
-  border-style: dotted;
-  border-color: azure;
-  border-radius: 18px;
-  margin: 0 5px 5px 0;
+  margin-left: 5px; /* Add left margin to avoid overlapping */
 }
+
+/* Styles for center-aligned images */
 .image-center {
-  float: right;
-  width: 820px;
-  height:400px;
-  border-style: dotted;
-  border-color: azure;
-  border-radius: 18px;
-  margin: 0 40px 0px 0;
+  clear: both; /* Clear floats to prevent layout issues */
+  margin: 0 auto 20px; /* Center the image horizontally and add bottom margin */
+  display: block; /* Make the image a block-level element for centering */
+}
+
+/* Additional styles for icon images */
+.image-left-icon, .image-right-icon {
+  width: 50px; /* Set the width of the icon */
+  height: auto; /* Auto adjust height to maintain aspect ratio */
 }

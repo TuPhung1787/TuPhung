@@ -1,12 +1,16 @@
 /* style.css */
 
+/* Reset default styles */
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
 /* Add custom styles here */
 
 body {
     background-color: #f5f5f5; /* Light gray background */
     font-family: Arial, sans-serif; /* Use a common font for better cross-browser compatibility */
-    margin: 0;
-    padding: 0;
 }
 
 .grid-container {
@@ -29,6 +33,43 @@ body {
     padding: 20px;
 }
 
-.menu, .main, .right {
-    flex-basis: 30%; /* Adjust widths as needed */
-    background-color: #fff
+.menu, .right {
+    flex-basis: 20%; /* Adjust widths as needed */
+    background-color: #fff;
+}
+
+.main {
+    flex-basis: 60%; /* Adjust width for the main content */
+    background-color: #fff;
+}
+
+.image-left, .image-right, .image-center, .image-left-icon {
+    border: 2px dotted azure; /* Simplified border style */
+    border-radius: 18px;
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+    display: block; /* Make the images block-level elements */
+}
+
+/* Styles for left-aligned images */
+.image-left, .image-left-icon {
+    float: left;
+    margin-right: 10px; /* Add right margin to avoid overlapping */
+}
+
+/* Styles for right-aligned images */
+.image-right {
+    float: right;
+    margin-left: 10px; /* Add left margin to avoid overlapping */
+}
+
+/* Styles for center-aligned images */
+.image-center {
+    margin: 0 auto 20px; /* Center the image horizontally and add bottom margin */
+    display: block; /* Make the image a block-level element for centering */
+}
+
+/* Additional styles for icon images */
+.image-left-icon {
+    width: 20px; /* Set the width of the icon */
+    height: auto; /* Auto adjust height to maintain aspect ratio */
+}

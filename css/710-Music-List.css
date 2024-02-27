@@ -1,5 +1,4 @@
 /* style.css */
-
 body {
     font-family: Arial, sans-serif;
 }
@@ -9,24 +8,27 @@ h2 {
 }
 
 ul {
-    max-height: 1000px;
+    /* Set a fixed height or max-height for the list */
+    max-height: 1000px; /* Adjust this value based on your needs */
+    
+    /* Enable scrolling */
     overflow-y: auto;
-
-    /* Scrollbar styling for webkit browsers */
+    
+    /* Optional: Style the scrollbar for webkit browsers */
     ::-webkit-scrollbar {
         width: 10px;
     }
-
+    
     ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: #f1f1f1; 
     }
-
+    
     ::-webkit-scrollbar-thumb {
-        background: #888;
+        background: #888; 
     }
-
+    
     ::-webkit-scrollbar-thumb:hover {
-        background: #555;
+        background: #555; 
     }
 }
 
@@ -38,21 +40,66 @@ li {
 }
 
 audio {
-    width: 100%;
+    width: 100%; /* Makes the audio player stretch to fit the container */
     margin-top: 10px;
 }
+.audio-controls button {
+    /* Base button styling */
+    padding: 10px;
+    margin-right: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
 
-/* Button Styles */
+.audio-controls button.active {
+    /* Styling for active button */
+    background-color: #007BFF; /* Brighter or different color for active state */
+    color: white;
+    border-color: #0056b3;
+}
+/* Default button style */
 button {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+/* Active state for shuffle button */
 button.active {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green background for active state */
+    color: white;
+}
+/* CSS styles for repeat button */
+.repeat-off {
+    background-color: #ccc; /* Gray for no repeat */
     color: white;
 }
 
-.audio-controls button {
-    padding: 10px
+.repeat-one {
+    background-color: #f44336; /* Red for repeat one */
+    color: white;
+}
+
+.repeat-all {
+    background-color: #4CAF50; /* Green for repeat all */
+    color: white;
+}
+.footer {
+    background-color: #2196F3; /* Header and footer background color */
+    color: white;
+    text-align: left; 
+    padding: 20px 0;
+    font-size: 25px;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+    font-size: 27px;
+  }
+  
+  .footer a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }

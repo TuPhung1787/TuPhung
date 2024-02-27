@@ -36,6 +36,7 @@ body {
     background-color: #fff;
     margin-top: 20px; /* Adjust margin top */
     margin-bottom: 20px; /* Adjust margin bottom */
+    align: left;
 }
 
 .main {
@@ -43,7 +44,7 @@ body {
     background-color: #fff;
 }
 
-.image-left, .image-right, .image-center, .image-left-icon {
+.image-left, .image-right, .image-center {
     border: 2px dotted azure; /* Simplified border style */
     border-radius: 18px;
     margin-bottom: 10px; /* Adjust margin for better spacing */
@@ -51,26 +52,25 @@ body {
 }
 
 /* Styles for left-aligned images */
-.image-left, .image-left-icon {
+.image-left {
     float: left;
+    width: 300px;
+    height: 200px;
     margin-right: 10px; /* Add right margin to avoid overlapping */
 }
 
 /* Styles for right-aligned images */
 .image-right {
     float: right;
+    width: 300px;
+    height: 200px;
     margin-left: 10px; /* Add left margin to avoid overlapping */
 }
 
 /* Styles for center-aligned images */
 .image-center {
-    margin: 0 auto 20px; /* Center the image horizontally and add bottom margin */
-    display: block; /* Make the image a block-level element for centering */
-}
-
-/* Additional styles for icon images */
-.image-left-icon {
-    width: 20px; /* Set the width of the icon */
-    height: auto; /* Auto adjust height to maintain aspect ratio */
-    margin: 20px 0 20px 0; /* Adjust margin top and bottom */
+    float: right;
+    width: 820px;
+    height: 400px;
+    margin: 0 15px 0px 0;
 }

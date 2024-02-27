@@ -1,83 +1,166 @@
 /* Reset default styles */
 body, h1, ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Add custom styles here */
 
 body {
-    background-color: #f5f5f5; /* Light gray background */
-    font-family: Arial, sans-serif; /* Use a common font for better cross-browser compatibility */
+  background-color: #f5f5f5; /* Light gray background */
+  font-family: Arial, sans-serif; /* Use a common font for better cross-browser compatibility */
 }
 
 .grid-container {
-    display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, middle content, footer */
-    min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, middle content, footer */
+  min-height: 100vh;
 }
 
-.header, .footer {
-    background-color: #2196F3; /* Header and footer background color */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+.header {
+  background-color: #2196F3; /* Header and footer background color */
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 69px;
 }
+
+
 
 .middle-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
 }
 
 .menu {
-    flex-basis: 23%; /* Adjust widths as needed */
-    background-color: #fff;
-    margin-top: 20px; /* Adjust margin top */
-    margin-bottom: 20px; /* Adjust margin bottom */
-    align: left;
+  flex-basis: 17%; /* Adjust widths as needed */
+  background-color: #fff;
+  margin-top: 20px; /* Adjust margin top */
+  margin-bottom: 20px; /* Adjust margin bottom */
+  text-align: left; /* Align menu items to the left */
+}
+
+.menu ul {
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Align items vertically */
+  align-items: flex-start; /* Align items vertically */
+  list-style: none; /* Remove default list styles */
+}
+
+.menu ul li {
+  margin-bottom: 10px; /* Adjust spacing between items */
+}
+
+.menu ul li a {
+  display: flex; /* Use flexbox for link items */
+  align-items: center; /* Align items vertically */
+  color: black; /* Adjust text color as needed */
+  text-decoration: none; /* Remove default underline */
+}
+
+.menu ul li a img {
+  margin-right: 10px; /* Adjust spacing between image and text */
+  font-size: 24px;
 }
 
 .main {
-    flex-basis: 77%; /* Adjust width for the main content */
-    background-color: #fff;
+  flex-basis: 83%; /* Adjust width for the main content */
+  background-color: #fff;
+  padding: 0 0 0 10px;
 }
 
-.image-left, .image-right, .image-center, .image-left-icon {
-    border: 2px dotted azure; /* Simplified border style */
-    border-radius: 18px;
-    margin-bottom: 10px; /* Adjust margin for better spacing */
-    display: block; /* Make the images block-level elements */
+.image-left, .image-right, .image-center {
+  border: 2px dotted azure; /* Simplified border style */
+  border-radius: 18px;
+  margin-bottom: 10px; /* Adjust margin for better spacing */
+  display: block; /* Make the images block-level elements */
 }
 
 /* Styles for left-aligned images */
-.image-left, .image-left-icon {
-    float: left;
-    width: 300px;
-    height: 200px;
-    margin-right: 10px; /* Add right margin to avoid overlapping */
-}
-
-/* Styles for right-aligned images */
-.image-right {
-    float: right;
-    width: 300px;
-    height: 200px;
-    margin-left: 10px; /* Add left margin to avoid overlapping */
+.image-left {
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin-right: 10px; /* Add right margin to avoid overlapping */
 }
 
 /* Styles for center-aligned images */
 .image-center {
-    float: right;
-    width: 820px;
-    height: 400px;
-    margin: 0 15px 0px 0;
+  display: block; /* Make the image a block-level element */
+  margin: 0 auto; /* Center the image horizontally */
+  width: 300px;
+  height: 200px;
+  margin-top: 10px; /* Add top margin to separate from other images */
+}
+
+/* Styles for right-aligned images */
+.image-right {
+  float: right;
+  width: 300px;
+  height: 200px;
+  margin-left: 10px; /* Add left margin to avoid overlapping */
+}
+
+/* Styles for center-aligned images */
+.image-center-l {
+  float: left;
+  width: 820px;
+  height: auto; 
+  margin: 20px 0px 30px 55px;
+  padding: 0px 0px 0px 0px;
 }
 
 /* Additional styles for icon images */
 .image-left-icon {
-    width: 20px; /* Set the width of the icon */
-    height: auto; /* Auto adjust height to maintain aspect ratio */
-    margin: 20px 0 20px 0;
+  width: 50px; /* Set the width of the icon */
+  height: 40px; /* Auto adjust height to maintain aspect ratio */
+  margin: 3px 0px 3px 0px;
+  text-align: left; /* Align icon images to the left */
+  float: center;
+}
+
+.text-icon {
+  display: flex;
+  align-items: center;
+  font-size: 20px; /* Adjust the font size for text-icon */
+  color: blue; /* Adjust the color for text-icon */
+  text-decoration: underline;
+}
+
+.text-icon img {
+  margin-right: 5px; /* Adjust spacing between image and text */
+  color: blue; /* Adjust the color for text-icon */
+}
+
+.larger-menu {
+  font-size: 30px; /* Adjust the font size for larger-menu */
+  color: red; /* Adjust the color for larger-menu */
+}
+.main a {
+  display: block; /* Ensure images are displayed as block-level elements */
+  margin-bottom: 20px; /* Add some space between images */
+}
+
+.main a img {
+  border: 2px solid #ccc; /* Add a solid border for better separation */
+  border-radius: 10px; /* Add rounded corners for a nicer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+.footer {
+  background-color: #2196F3; /* Header and footer background color */
+  color: white;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 25px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
 }

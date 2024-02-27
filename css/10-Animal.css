@@ -43,3 +43,21 @@ h1 {
   border-radius: 18px;
   margin: 0 10px 10px 0;
 }
+.footer {
+  background-color: #2196F3; /* Header and footer background color */
+  color: white;
+  text-align: left; 
+  padding: 20px 0;
+  font-size: 25px;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 27px;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}

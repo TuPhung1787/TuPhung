@@ -34,6 +34,8 @@ body {
 .menu {
     flex-basis: 23%; /* Adjust widths as needed */
     background-color: #fff;
+    margin-top: 20px; /* Adjust margin top */
+    margin-bottom: 20px; /* Adjust margin bottom */
     align: left;
 }
 
@@ -42,7 +44,7 @@ body {
     background-color: #fff;
 }
 
-.image-left, .image-right, .image-center {
+.image-left, .image-right, .image-center, .image-left-icon {
     border: 2px dotted azure; /* Simplified border style */
     border-radius: 18px;
     margin-bottom: 10px; /* Adjust margin for better spacing */
@@ -50,7 +52,7 @@ body {
 }
 
 /* Styles for left-aligned images */
-.image-left {
+.image-left, .image-left-icon {
     float: left;
     width: 300px;
     height: 200px;
@@ -71,4 +73,11 @@ body {
     width: 820px;
     height: 400px;
     margin: 0 15px 0px 0;
+}
+
+/* Additional styles for icon images */
+.image-left-icon {
+    width: 20px; /* Set the width of the icon */
+    height: auto; /* Auto adjust height to maintain aspect ratio */
+    margin: 20px 0 20px 0;
 }

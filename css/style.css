@@ -124,6 +124,7 @@ body {
 .text-icon img {
   margin-right: 5px; /* Adjust spacing between image and text */
   color: blue; /* Adjust the color for text-icon */
+
 }
 
 .larger-menu {
@@ -174,4 +175,15 @@ body {
   color: black;
   text-decoration: none;
   font-weight: bold;
+}
+/* Add the CSS rules for hover effect */
+.highlight-on-hover:hover {
+  color: white; /* Change text color when hovered */
+  background-color: yellowgreen; /* Change background color when hovered */
+  /* Add any other styles you want to apply when hovered */
+}
+.highlight-yellow-hover:hover {
+  color: blue; /* Change text color when hovered */
+  background-color: yellow; /* Change background color when hovered */
+  /* Add any other styles you want to apply when hovered */
 }

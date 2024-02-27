@@ -103,14 +103,6 @@ body {
   margin-left: 10px; /* Add left margin to avoid overlapping */
 }
 
-/* Styles for center-aligned images */
-.image-center-l {
-  float: left;
-  width: 820px;
-  height: auto; 
-  margin: 20px 0px 30px 55px;
-  padding: 0px 0px 0px 0px;
-}
 
 /* Additional styles for icon images */
 .image-left-icon {
@@ -138,29 +130,48 @@ body {
   font-size: 30px; /* Adjust the font size for larger-menu */
   color: red; /* Adjust the color for larger-menu */
 }
+/* adjust for image with border */
 .main a {
   display: block; /* Ensure images are displayed as block-level elements */
-  margin-bottom: 20px; /* Add some space between images */
+  margin: 20px 60px 20px 80px;
 }
-
+/* adjust for image with image */
 .main a img {
   border: 2px solid #ccc; /* Add a solid border for better separation */
   border-radius: 10px; /* Add rounded corners for a nicer look */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  margin: 20px 20px 20px 20px;
+}
+/* Styles for center-aligned images */
+.image-center-l {
+  float: left; /* Change the float property */
+  width: 1000px; /* Change the width */
+  height: auto; /* Allow the height to adjust automatically */
+  margin: 0 0 30px 55px; /* Adjust margins as needed */
+  padding: 0; /* Reset padding */
+  border: 2px solid #ccc; /* Add a border */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+/* Adjust margin for image inside .main a */
+.main a.image-center-l img {
+  margin: 0px 0px 0px 120px; /* Adjust margin for image inside .main a */
 }
 .footer {
   background-color: #2196F3; /* Header and footer background color */
   color: white;
-  text-align: left;
+  text-align: center; /* Center align the text */
   padding: 20px 0;
   font-size: 25px;
 }
 
 .footer p {
   margin: 5px 0;
+  font-size: 27px;
 }
 
 .footer a {
   color: black;
   text-decoration: none;
+  font-weight: bold;
 }

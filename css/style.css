@@ -160,7 +160,7 @@ body {
 .footer {
   background-color: #2196F3; /* Header and footer background color */
   color: white;
-  text-align: center; /* Center align the text */
+  text-align: left; 
   padding: 20px 0;
   font-size: 25px;
 }

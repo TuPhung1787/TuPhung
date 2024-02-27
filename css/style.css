@@ -34,8 +34,6 @@ body {
 .menu {
     flex-basis: 23%; /* Adjust widths as needed */
     background-color: #fff;
-    margin-top: 20px; /* Adjust margin top */
-    margin-bottom: 20px; /* Adjust margin bottom */
     align: left;
 }
 

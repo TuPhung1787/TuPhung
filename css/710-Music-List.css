@@ -12,7 +12,7 @@ background-color: #2196F3; /* Header and footer background color */
 color: rgba(3, 18, 176, 0.764);
 text-align: center;
 font-size: 60px;
-background-image: url('../image/menu.png'); /* Path to your image */
+background-image: url('image/menu.png'); /* Path to your image */
 background-size: 100% ; /* Cover the entire page */
 background-position: center; /* Center the background image */
 }

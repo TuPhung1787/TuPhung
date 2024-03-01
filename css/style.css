@@ -1,31 +1,31 @@
-/* Reset default styles */
-body, h1, ul {
+/* Add custom styles here */
+body {
+  background-color: #f5f5f5; /* Light gray background */
+  font-family: Arial, sans-serif; /* Use a common font for better cross-browser compatibility */
   margin: 0;
   padding: 0;
 }
 
-/* Add custom styles here */
-
-body {
-  background-color: #f5f5f5; /* Light gray background */
-  font-family: Arial, sans-serif; /* Use a common font for better cross-browser compatibility */
-}
-
-.grid-container {
+.grid-page {
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Header, middle content, footer */
+  grid-template-rows: auto auto auto; /* Header, middle content, footer */
   min-height: 100vh;
 }
-
 .header {
   background-color: #2196F3; /* Header and footer background color */
-  color: black;
+  color: white;
   text-align: center;
   padding: 20px 0;
   font-size: 69px;
+  background-image: url('../image/header.png'); /* Path to your image */
+  background-size: 100% ; /* Cover the entire page */
+  background-position: center; /* Center the background image */
 }
-
-
+/* Add the CSS rules for hover effect */
+.header-menu-hover:hover {
+  color: blue; /* Change text color when hovered */
+  background-color: green; /* Change background color when hovered */
+}
 
 .middle-row {
   display: flex;
@@ -34,12 +34,21 @@ body {
   padding: 20px;
 }
 
+.larger-menu {
+  font-size: 30px; /* Adjust the font size for larger-menu */
+  color: white; /* Adjust the color for larger-menu */
+  text-align: center; 
+}
+
 .menu {
-  flex-basis: 17%; /* Adjust widths as needed */
+  flex-basis: 20%; /* Adjust widths as needed */
   background-color: #fff;
   margin-top: 20px; /* Adjust margin top */
   margin-bottom: 20px; /* Adjust margin bottom */
   text-align: left; /* Align menu items to the left */
+  background-image: url('../image/menu.png'); /* Path to your image */
+  background-size: 100% ; /* Cover the entire page */
+  background-position: center; /* Center the background image */
 }
 
 .menu ul {
@@ -47,65 +56,85 @@ body {
   flex-direction: column; /* Align items vertically */
   align-items: flex-start; /* Align items vertically */
   list-style: none; /* Remove default list styles */
-}
-
-.menu ul li {
   margin-bottom: 10px; /* Adjust spacing between items */
+  padding: 0;
 }
 
-.menu ul li a {
+.menu ul a {
   display: flex; /* Use flexbox for link items */
   align-items: center; /* Align items vertically */
-  color: black; /* Adjust text color as needed */
+  color: white; /* Adjust text color as needed */
   text-decoration: none; /* Remove default underline */
 }
 
-.menu ul li a img {
+.menu ul a img {
   margin-right: 10px; /* Adjust spacing between image and text */
   font-size: 24px;
 }
 
-.main {
-  flex-basis: 83%; /* Adjust width for the main content */
-  background-color: #fff;
-  padding: 0 0 0 10px;
+.text-icon {
+  display: inline-block; /* Allows transform to affect the element */
+  align-items: center;
+  font-size: 20px; /* Original font size */
+  color: blue;
+  text-decoration: underline;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
-.image-left, .image-right, .image-center {
-  border: 2px dotted azure; /* Simplified border style */
-  border-radius: 18px;
+.text-icon:hover {
+  transform: scale(1.2); /* Enlarge text on hover */
+  color: #000; /* Optional: Change color on hover */
+  text-decoration: none; /* Optional: Remove underline on hover */
+}
+.text-icon:hover em {
+  color:blueviolet;
+  background-color: yellow; 
+}
+
+.text-icon img {
+  margin-right: 5px; /* Adjust spacing between image and text */
+  color: blue; /* Adjust the color for text-icon */
+}
+/* Styles exclusively for elements inside .grid-main */
+.grid-main {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, 1fr)); /* Create as many columns as needed, each at least 300px wide */
+  flex-basis: auto;
+  gap: 20px; /* Space between grid items */
+  padding: 20px; /* Padding around the entire grid */
+  background-image: url('../image/main_1.jpg'); /* Path to your image */
+  background-size: 100% ; /* Cover the entire page */
+  background-position: center; /* Center the background image */
+}
+
+/* Targeting anchor tags that directly contain an image with class .image-main */
+.grid-image-main {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px; /* Adjust based on content */
+  text-align: center;
+  overflow: hidden; /* Ensures no overflow out of the container */
+}
+
+.grid-main a:hover img {
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* More pronounced shadow on hover */
+  transform: scale(1.2); /* Slightly enlarge images on hover */
+}
+
+.image-main {
+  width: 100%; /* Make the image width responsive to the container size */
+  max-width: 300px; /* Maximum original width */
+  height: 200px; /* Make the image width responsive to the container size */
+  border: 4px dotted rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 10px; /* Adjust margin for better spacing */
-  display: block; /* Make the images block-level elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds depth with shadow */
 }
-
-/* Styles for left-aligned images */
-.image-left {
-  float: left;
-  width: 300px;
-  height: 200px;
-  margin-right: 10px; /* Add right margin to avoid overlapping */
-}
-
-/* Styles for center-aligned images */
-.image-center {
-  display: block; /* Make the image a block-level element */
-  margin: 0 auto; /* Center the image horizontally */
-  width: 300px;
-  height: 200px;
-  margin-top: 10px; /* Add top margin to separate from other images */
-}
-
-/* Styles for right-aligned images */
-.image-right {
-  float: right;
-  width: 300px;
-  height: 200px;
-  margin-left: 10px; /* Add left margin to avoid overlapping */
-}
-
 
 /* Additional styles for icon images */
-.image-left-icon {
+.image-main-icon {
   width: 50px; /* Set the width of the icon */
   height: 40px; /* Auto adjust height to maintain aspect ratio */
   margin: 3px 0px 3px 0px;
@@ -113,40 +142,9 @@ body {
   float: center;
 }
 
-.text-icon {
-  display: flex;
-  align-items: center;
-  font-size: 20px; /* Adjust the font size for text-icon */
-  color: blue; /* Adjust the color for text-icon */
-  text-decoration: underline;
-}
-
-.text-icon img {
-  margin-right: 5px; /* Adjust spacing between image and text */
-  color: blue; /* Adjust the color for text-icon */
-
-}
-
-.larger-menu {
-  font-size: 30px; /* Adjust the font size for larger-menu */
-  color: red; /* Adjust the color for larger-menu */
-}
-/* adjust for image with border */
-.main a {
-  display: block; /* Ensure images are displayed as block-level elements */
-  margin: 20px 60px 20px 80px;
-}
-/* adjust for image with image */
-.main a img {
-  border: 2px solid #ccc; /* Add a solid border for better separation */
-  border-radius: 10px; /* Add rounded corners for a nicer look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-  margin: 20px 20px 20px 20px;
-}
 /* Styles for center-aligned images */
 .image-center-l {
-  float: left; /* Change the float property */
-  width: 1000px; /* Change the width */
+  width: auto; /* Change the width */
   height: auto; /* Allow the height to adjust automatically */
   margin: 0 0 30px 55px; /* Adjust margins as needed */
   padding: 0; /* Reset padding */
@@ -154,10 +152,7 @@ body {
   border-radius: 10px; /* Add border radius */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
-/* Adjust margin for image inside .main a */
-.main a.image-center-l img {
-  margin: 0px 0px 0px 120px; /* Adjust margin for image inside .main a */
-}
+
 .footer {
   background-color: #2196F3; /* Header and footer background color */
   color: white;
@@ -176,14 +171,22 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-/* Add the CSS rules for hover effect */
-.highlight-on-hover:hover {
-  color: white; /* Change text color when hovered */
-  background-color: yellowgreen; /* Change background color when hovered */
-  /* Add any other styles you want to apply when hovered */
-}
-.highlight-yellow-hover:hover {
+
+.footer-hover:hover {
   color: blue; /* Change text color when hovered */
   background-color: yellow; /* Change background color when hovered */
   /* Add any other styles you want to apply when hovered */
+}
+
+@media (max-width: 768px) {
+  .grid-main {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets and similar devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-main {
+    grid-template-columns: 1fr; /* 1 column for mobile phones */
+  }
+  
 }

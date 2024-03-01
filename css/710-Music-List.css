@@ -114,3 +114,7 @@ button.active {
     text-decoration: none;
     font-weight: bold;
   }
+  .playing {
+    background-color: #4CAF50; /* Or any highlight color */
+    color: white;
+}

@@ -25,9 +25,23 @@ const updateShuffleOrder = () => {
         shuffleOrder.unshift(currentTrack); // Reinsert the current track at the start
     }
 };
+// Function to highlight the playing track
+const highlightPlayingTrack = (index) => {
+    const tracks = document.querySelectorAll('li');
+    tracks.forEach((track, i) => {
+        if (i === index) {
+            track.classList.add('playing');
+            // Ensure the playing track is visible on the screen
+            track.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+            track.classList.remove('playing');
+        }
+    });
+};
+
 const playTrack = (index) => {
     //console.log(`Attempting to play track at index: ${index}`);
-    
+    highlightPlayingTrack(index); // Highlight and scroll to the playing track
     // First, pause and reset all tracks
     audioPlayers.forEach((audio, audioIndex) => {
         if (!audio.paused) {
@@ -43,6 +57,7 @@ const playTrack = (index) => {
     trackToPlay.play().then(() => {
         console.log(`Track ${index} is now playing.`);
         currentTrack = index; // Update the currentTrack index only after playback starts
+        highlightPlayingTrack(index); // Highlight and scroll to the playing track
         }).catch(error => {
         console.error(`Error playing track ${index}:`, error);
     });
@@ -56,6 +71,7 @@ function pauseOtherTracks(currentIndex) {
     }
 });
 }
+
 
 // Add event listeners to each audio element
 audioPlayers.forEach((audio, index) => {

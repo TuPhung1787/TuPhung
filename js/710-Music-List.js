@@ -41,7 +41,6 @@ const highlightPlayingTrack = (index) => {
 
 const playTrack = (index) => {
     //console.log(`Attempting to play track at index: ${index}`);
-    highlightPlayingTrack(index); // Highlight and scroll to the playing track
     // First, pause and reset all tracks
     audioPlayers.forEach((audio, audioIndex) => {
         if (!audio.paused) {
@@ -71,7 +70,6 @@ function pauseOtherTracks(currentIndex) {
     }
 });
 }
-
 
 // Add event listeners to each audio element
 audioPlayers.forEach((audio, index) => {

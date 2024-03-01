@@ -71,6 +71,7 @@ function pauseOtherTracks(currentIndex) {
 });
 }
 
+
 // Add event listeners to each audio element
 audioPlayers.forEach((audio, index) => {
 audio.addEventListener('play', () => pauseOtherTracks(index));

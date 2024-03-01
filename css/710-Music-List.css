@@ -1,79 +1,99 @@
 /* style.css */
+
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
 }
 
+/* Grid layout */
 .grid-page {
     display: grid;
-    grid-template-rows: auto auto auto; /* Header, middle content, footer */
+    height: 100vh;
+    grid-template-rows: 100px 1fr 100px; /* Fixed height header and footer */
 }
+
+/* Header styles */
 .grid-header {
-background-color: #2196F3; /* Header and footer background color */
-color: rgba(3, 18, 176, 0.764);
-text-align: center;
-font-size: 60px;
+    background-color: #2196F3; /* Header background color */
+    color: rgba(3, 18, 176, 0.764);
+    text-align: center;
+    font-size: 60px;
 }
+
+/* Hover effect for header */
 .header-hover:hover {
     color: blue; /* Change text color when hovered */
     background-color: green; /* Change background color when hovered */
     font-size: 70px;
-  }
-ul {
-    /* Set a fixed height or max-height for the list */
-    max-height: 500px; /* Adjust this value based on your needs */
-    
-    /* Enable scrolling */
-    overflow-y: auto;
-    
-    /* Optional: Style the scrollbar for webkit browsers */
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-    
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        background: #888; 
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-    }
 }
 
+/* Scrollable list styles */
+ul {
+    max-height: 100px; /* Set a fixed height or max-height for the list */
+    overflow-y: auto; /* Enable scrolling */
+    list-style: none; /* Remove bullet points */
+}
+
+/* Scrollbar styles */
+ul::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+ul::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Style the background of the scrollbar track */
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #888; /* Style the background of the scrollbar thumb */
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Style the background of the scrollbar thumb when hovered */
+}
+
+/* List item styles */
 li {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Light grey background */
+    color: black; /* Black text for visibility */
     margin-bottom: 10px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
+/* Audio player styles */
 audio {
     width: 100%; /* Makes the audio player stretch to fit the container */
-    margin-top: 10px;
+    padding: 10px 10px 0 0;
+    margin: 10px 0 0 0;
 }
+
+/* Audio control button styles */
 .audio-controls button {
-    /* Base button styling */
-    padding: 10px;
-    margin-right: 5px;
+    padding: 0px;
+    margin-right: 0px;
     background-color: #f0f0f0;
     border: 1px solid #ddd;
     cursor: pointer;
 }
 
 .audio-controls button.active {
-    /* Styling for active button */
-    background-color: #007BFF; /* Brighter or different color for active state */
+    background-color: #007BFF; /* Brighter color for active state */
     color: white;
     border-color: #0056b3;
 }
+
 /* Default button style */
 button {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Hover effect for buttons */
+.button-hover:hover {
+    background-color: #49da0c;
+    transform: scale(1.2);
 }
 
 /* Active state for shuffle button */
@@ -81,6 +101,7 @@ button.active {
     background-color: #4CAF50; /* Green background for active state */
     color: white;
 }
+
 /* CSS styles for repeat button */
 .repeat-off {
     background-color: #ccc; /* Gray for no repeat */
@@ -96,25 +117,39 @@ button.active {
     background-color: #4CAF50; /* Green for repeat all */
     color: white;
 }
+
+/* Footer styles */
 .footer {
-    background-color: #2196F3; /* Header and footer background color */
+    background-color: #2196F3; /* Footer background color */
     color: white;
     text-align: left; 
     padding: 20px 0;
     font-size: 25px;
-  }
-  
-  .footer p {
+}
+
+/* Footer paragraph styles */
+.footer p {
     margin: 5px 0;
     font-size: 27px;
-  }
-  
-  .footer a {
+}
+
+/* Footer link styles */
+.footer a {
     color: black;
     text-decoration: none;
     font-weight: bold;
-  }
-  /* .playing {
-    background-color: #4CAF50; 
-    color: white;
-} */
+}
+
+/* Playing track styles */
+.playing {
+    background-color: #4CAF50; /* Green background for active state */
+    color: black; /* Ensuring text is readable on the green background */
+    border-left: 5px solid #2196F3; /* Add a left border for more emphasis */
+}
+
+/* Hover effect for footer */
+.footer-hover:hover {
+    color: blue; /* Change text color when hovered */
+    background-color: yellow; /* Change background color when hovered */
+    /* Add any other styles you want to apply when hovered */
+}

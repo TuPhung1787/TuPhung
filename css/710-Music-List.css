@@ -3,13 +3,27 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h2 {
-    color: #333;
+.grid-page {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Header, middle content, footer */
 }
-
+.grid-header {
+background-color: #2196F3; /* Header and footer background color */
+color: rgba(3, 18, 176, 0.764);
+text-align: center;
+font-size: 60px;
+background-image: url('../image/menu.png'); /* Path to your image */
+background-size: 100% ; /* Cover the entire page */
+background-position: center; /* Center the background image */
+}
+.header-hover:hover {
+    color: blue; /* Change text color when hovered */
+    background-color: green; /* Change background color when hovered */
+    font-size: 70px;
+  }
 ul {
     /* Set a fixed height or max-height for the list */
-    max-height: 666px; /* Adjust this value based on your needs */
+    max-height: 500px; /* Adjust this value based on your needs */
     
     /* Enable scrolling */
     overflow-y: auto;

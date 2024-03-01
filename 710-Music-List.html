@@ -6,37 +6,39 @@
     <link rel="stylesheet" href="css/710-Music-List.css"> <!-- Ensure you have a CSS file for styling if needed -->
 </head>
 <body>
-
-<h2>My Music Playlist</h2>
-
+<div class="grid-page">
+    <div class="grid-header header-hover" id="dynamicHeader">My Music Playlist</div>
+    <div clase="grid-main">
 <!-- Audio tracks -->
-<ul>
-    <li>Track 1: <audio controls><source src="audio/1.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 2: <audio controls><source src="audio/2.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 3: <audio controls><source src="audio/3.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 4: <audio controls><source src="audio/4.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 5: <audio controls><source src="audio/5.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 6: <audio controls><source src="audio/6.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 7: <audio controls><source src="audio/7.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 8: <audio controls><source src="audio/8.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 9: <audio controls><source src="audio/9.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 10: <audio controls><source src="audio/10.mp3" type="audio/mpeg"></audio></li>
-    <li>Track 11: <audio controls><source src="audio/11.mp3" type="audio/mpeg"></audio></li>
-    <!-- Add more tracks as needed -->
-</ul>
+        <ul>
+            <li>Track 1: <audio controls><source src="audio/1.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 2: <audio controls><source src="audio/2.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 3: <audio controls><source src="audio/3.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 4: <audio controls><source src="audio/4.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 5: <audio controls><source src="audio/5.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 6: <audio controls><source src="audio/6.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 7: <audio controls><source src="audio/7.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 8: <audio controls><source src="audio/8.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 9: <audio controls><source src="audio/9.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 10: <audio controls><source src="audio/10.mp3" type="audio/mpeg"></audio></li>
+            <li>Track 11: <audio controls><source src="audio/11.mp3" type="audio/mpeg"></audio></li>
+            <!-- Add more tracks as needed -->
+        </ul>
 
-<!-- Controls -->
-<div>
-    <button id="prevTrack">Previous</button>
-    <button id="nextTrack">Next</button>
-    <button id="shuffleTrack">Shuffle</button>
-    <button id="repeatTrack">Repeat</button>
-</div>
-
+        <!-- Controls -->
+        <div>
+            <button id="prevTrack">Previous</button>
+            <button id="nextTrack">Next</button>
+            <button id="shuffleTrack">Shuffle</button>
+            <button id="repeatTrack">Repeat</button>
+        </div>
+    </div>
 <script src="js/710-Music-List.js"></script> <!-- Link to your JavaScript file -->
-<div class="footer">
-    <p><u><em>Email:</em></u> tu.phung@myy.haaga-helia.fi&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<u><em>Phone:</em></u> +358 45 234 9495&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<u><em>Address: </em></u>369 Malminkatano, 00410 Helsinki, Finland</p>
-    <p><a href="index.html"><u>Back to the main page</u></a></p>
-  </div>
+    <div class="footer">
+        <p><u><em>Email:</em></u> tu.phung@myy.haaga-helia.fi&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<u><em>Phone:</em></u> +358 45 234 9495&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<u><em>Address: </em></u>369 Malminkatano, 00410 Helsinki, Finland</p>
+        <p><a href="index.html"><u>Back to the main page</u></a></p>
+    </div>
+
+</div> 
 </body>
 </html>

@@ -140,8 +140,8 @@ audioPlayers.forEach((player, index) => {
 updateShuffleOrder(); // Initialize shuffle order when the page loads
 
 const images = [
-    'url(image/menu.png)',
-    'url(image/main_1.jpg)',
+    'url(/image/menu.png)',
+    'url(/image/main_1.jpg)',
        // Add as many images as you want, ensure they're wrapped with url()
 ];
 let currentIndex = 0;

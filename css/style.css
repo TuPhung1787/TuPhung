@@ -17,6 +17,9 @@ body {
   text-align: center;
   padding: 20px 0;
   font-size: 69px;
+  background-image: url('../image/header.png'); /* Path to your image */
+  background-size: 100% ; /* Cover the entire page */
+  background-position: center; /* Center the background image */
 }
 /* Add the CSS rules for hover effect */
 .header-menu-hover:hover {

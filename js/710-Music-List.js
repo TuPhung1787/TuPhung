@@ -65,7 +65,6 @@ function pauseOtherTracks(currentIndex) {
 });
 }
 
-
 // Add event listeners to each audio element
 audioPlayers.forEach((audio, index) => {
 audio.addEventListener('play', () => pauseOtherTracks(index));
@@ -110,21 +109,21 @@ const getPreviousTrackIndex = () => {
 
 
  // Event listeners for controls
- document.getElementById('nextTrack').addEventListener('click', () => {
+document.getElementById('nextTrack').addEventListener('click', () => {
     if (repeatMode === 1) {
       playTrack(currentTrack); // Repeat current track in "Repeat One" mode
     } else {
       playTrack(getNextTrackIndex());
     }
-  });
+});
 
-  document.getElementById('prevTrack').addEventListener('click', () => {
+document.getElementById('prevTrack').addEventListener('click', () => {
     if (repeatMode === 1) {
       playTrack(currentTrack); // Repeat current track in "Repeat One" mode
     } else {
       playTrack(getPreviousTrackIndex());
     }
-  });
+});
 
 // Event listener for toggling shuffle mode
 document.getElementById('shuffleTrack').addEventListener('click', () => {
@@ -132,7 +131,6 @@ document.getElementById('shuffleTrack').addEventListener('click', () => {
     document.getElementById('shuffleTrack').classList.toggle('active', isShuffle); // Update button appearance
     updateShuffleOrder(); // Reinitialize shuffle order with the new mode
 });
-
 
 // Set up handling for when a track ends
 audioPlayers.forEach((player, index) => {
@@ -148,6 +146,7 @@ audioPlayers.forEach((player, index) => {
 
 updateShuffleOrder(); // Initialize shuffle order when the page loads
 
+//make the changing images background same as the gif
 const images = [
     'url(https://tuphung1787.github.io/TuPhung/image/menu.png)',
     'url(https://tuphung1787.github.io/TuPhung/image/main_1.jpg)',
@@ -162,6 +161,6 @@ const changeBackgroundImage = () => {
 };
 
 // Set the interval to change the background image. 1000ms = 1 second
-setInterval(changeBackgroundImage, 1000); // Change background image every 3 seconds
+setInterval(changeBackgroundImage, 1000); // Change background image every 1 seconds
 
 });

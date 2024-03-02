@@ -153,3 +153,7 @@ button.active {
     background-color: yellow; /* Change background color when hovered */
     /* Add any other styles you want to apply when hovered */
 }
+
+.footer-hover:hover p{
+    transform: scale(1.1);
+}

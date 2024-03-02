@@ -9,10 +9,6 @@ let currentTrack = 0; // Index of the currently playing track
 let isShuffle = false; // Shuffle mode status (off by default)
 let repeatMode = 0; // Repeat mode status (0: No Repeat, 1: Repeat One, 2: Repeat All)
 let shuffleOrder = []; // Array to hold the order of tracks when shuffling
-if (!isShuffle) {
-     //console.log('3-Shuffle mode is off');
-    // Linear mode logic
-  }
 // Function to initialize or update the order of tracks for shuffle mode
 const updateShuffleOrder = () => {
     // Create an array with indices corresponding to the track list
@@ -40,11 +36,9 @@ const highlightPlayingTrack = (index) => {
 };
 
 const playTrack = (index) => {
-    //console.log(`Attempting to play track at index: ${index}`);
     // First, pause and reset all tracks
     audioPlayers.forEach((audio, audioIndex) => {
         if (!audio.paused) {
-            //console.log(`Pausing track at index: ${audioIndex}`);
             audio.pause(); // Pause any playing track
             audio.currentTime = 0; // Reset its time
         }
@@ -52,7 +46,6 @@ const playTrack = (index) => {
 
     // Now, attempt to play the selected track
     const trackToPlay = audioPlayers[index];
-    //console.log(`Playing track at index: ${index}`);
     trackToPlay.play().then(() => {
         console.log(`Track ${index} is now playing.`);
         currentTrack = index; // Update the currentTrack index only after playback starts
@@ -61,6 +54,7 @@ const playTrack = (index) => {
         console.error(`Error playing track ${index}:`, error);
     });
 };
+
 // Function to pause all tracks except the currently playing one
 function pauseOtherTracks(currentIndex) {
     audioPlayers.forEach((audio, index) => {

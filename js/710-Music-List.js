@@ -187,7 +187,7 @@ audioPlayers.forEach((player, index) => {
 updateShuffleOrder(); // Initialize shuffle order when the page loads
 
 //make the changing images background same as the gif
-const images = [
+const images_header = [
     'url(https://tuphung1787.github.io/TuPhung/image/menu.png)',
     'url(https://tuphung1787.github.io/TuPhung/image/main_1.jpg)',
        // Add as many images as you want, ensure they're wrapped with url()
@@ -195,9 +195,11 @@ const images = [
 let currentIndex = 0;
 
 const changeBackgroundImage = () => {
+    // Change the background image to the header images.
     const headerElement = document.getElementById('dynamicHeader');
-    headerElement.style.backgroundImage = images[currentIndex];
-    currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+    headerElement.style.backgroundImage = images_header[currentIndex];
+    currentIndex = (currentIndex + 1) % images_header.length; // Loop back to the first image
+    
 };
 
 // Set the interval to change the background image. 1000ms = 1 second

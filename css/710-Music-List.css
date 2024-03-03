@@ -120,9 +120,10 @@ button {
 #prevTrack,
 #nextTrack {
     width: 100px; /* Set the width of the previous and next buttons */
-    font-size:36px;
+    font-size: 36px;
     height: 60px;
     padding: 0 0 6px 0;
+    line-height: 60px; /* Center the symbol vertically */
 }
 
 /* Hover effect for buttons */

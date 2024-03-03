@@ -53,8 +53,8 @@ ul::-webkit-scrollbar-thumb:hover {
 li {
     background-color: #f9f9f9; /* Light grey background */
     color: black; /* Black text for visibility */
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 0px;
+    padding: 0px;
     border-radius: 15px;
 }
 
@@ -79,13 +79,20 @@ audio {
     color: white;
     border-color: #0056b3;
 }
-#Play{/*state is Play but show on button is paused*/
+/* Playing track styles */
+.playing {
+    background-color: #4CAF50; /* Green background for active state */
+    color: black; /* Ensuring text is readable on the green background */
+    border-left: 5px solid #2196F3; /* Add a left border for more emphasis */
+}
+
+#Play.paused{/*state is Play but show on button is paused*/
     background-color: rgb(205, 50, 50); /* Default color for "Play" */
     color: white;
     font-size: 24px;
 }
 
-#Play.paused  { /*state is Pause but show on button is playing*/
+#Play  { /*state is Pause but show on button is playing*/
     background-color: rgb(77, 255, 0); /* Color for "Pause" */
     color: black;
     font-size: 24px;
@@ -98,6 +105,24 @@ button {
     transition: background-color 0.3s ease;
     border-radius: 10px;
     font-size: 24px;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Add space between buttons */
+    padding: 5px; /* Add padding to create space between buttons and border */
+    width: fit-content; /* Adjust the width to fit the content */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Make the previous and next buttons longer */
+#prevTrack,
+#nextTrack {
+    width: 100px; /* Set the width of the previous and next buttons */
+    font-size:36px;
+    height: 60px;
+    padding: 0 0 6px 0;
 }
 
 /* Hover effect for buttons */
@@ -152,13 +177,6 @@ button.active {
     color: black;
     text-decoration: none;
     font-weight: bold;
-}
-
-/* Playing track styles */
-.playing {
-    background-color: #4CAF50; /* Green background for active state */
-    color: black; /* Ensuring text is readable on the green background */
-    border-left: 5px solid #2196F3; /* Add a left border for more emphasis */
 }
 
 /* Hover effect for footer */

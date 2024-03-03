@@ -107,47 +107,42 @@ const getPreviousTrackIndex = () => {
     return (currentTrack - 1 + audioPlayers.length) % audioPlayers.length;
 };
 
-// Function to toggle play/pause
+// Function to toggle play/pause and update button appearance
 const togglePlayPause = () => {
-    if (isPlaying) {
-        // If currently playing, pause all tracks
-        audioPlayers.forEach(audio => audio.pause());
-        isPlaying = false;
+    const playPauseButton = document.getElementById('Play');
+    const currentAudio = audioPlayers[currentTrack];
+
+    if (currentAudio.paused) {
+        currentAudio.play();
+        playPauseButton.textContent = '⏸️';
+        playPauseButton.classList.remove('paused');
     } else {
-        // If currently paused, play the current track
-        playTrack(currentTrack);
-        isPlaying = true;
+        currentAudio.pause();
+        playPauseButton.textContent = '▶️';
+        playPauseButton.classList.add('paused');
     }
 };
 
-// Event listener for the play/pause button
 document.getElementById('Play').addEventListener('click', togglePlayPause);
 
-const playPauseButton = document.getElementById('Play');
+const updatePlayButton = () => {
+    const playPauseButton = document.getElementById('Play');
+    const currentAudio = audioPlayers[currentTrack];
 
-playPauseButton.addEventListener('click', () => {
-    if (audioPlayers[currentTrack].paused) {
-        audioPlayers[currentTrack].play();
-        playPauseButton.textContent = '▶️';//click will play the current track.
+    if (currentAudio.paused) {
+        playPauseButton.textContent = '⏸️';
+        playPauseButton.classList.add('paused');
     } else {
-        audioPlayers[currentTrack].pause();
-        playPauseButton.textContent = '⏸️';//click will pause the current track
+        playPauseButton.textContent = '▶️';
+        playPauseButton.classList.remove('paused');
     }
-});
-
-// Design CSS for the play/pause button
-const playButton = document.getElementById('Play');
-
-// Function to toggle the "paused" class on the play button
-const togglePausedClass = () => {
-    playButton.classList.toggle('paused');
 };
 
-// Add event listener to the audio elements to toggle the class
 audioPlayers.forEach((audio, index) => {
-    audio.addEventListener('play', () => togglePausedClass());
-    audio.addEventListener('pause', () => togglePausedClass());
+    audio.addEventListener('play', updatePlayButton);
+    audio.addEventListener('pause', updatePlayButton);
 });
+
 
  // Event listeners for controls
 document.getElementById('nextTrack').addEventListener('click', () => {

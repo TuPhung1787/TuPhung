@@ -198,21 +198,23 @@ const images_main = [
     'url(https://tuphung1787.github.io/TuPhung/image/art_8.png)',
        // Add as many images as you want, ensure they're wrapped with url()
 ];
-let currentIndex = 0;
+let currentIndexHeader = 0;
+let currentIndexMain = 0;
 
-const changeBackgroundImage = () => {
-    // Change the background image to the header images.
+const changeBackgroundImageHeader = () => {
     const headerElement = document.getElementById('dynamicHeader');
-    headerElement.style.backgroundImage = images_header[currentIndex];
-    currentIndex = (currentIndex + 1) % images_header.length; // Loop back to the first image
-
-    const MainElement = document.getElementById('dynamicMain');
-    MainElement.style.backgroundImage = images_main[currentIndex];
-    currentIndex = (currentIndex + 1) % images_main.length; // Loop back to the first image
-
+    headerElement.style.backgroundImage = images_header[currentIndexHeader];
+    currentIndexHeader = (currentIndexHeader + 1) % images_header.length;
 };
 
-// Set the interval to change the background image. 1000ms = 1 second
-setInterval(changeBackgroundImage, 1000); // Change background image every 1 seconds
+const changeBackgroundImageMain = () => {
+    const mainElement = document.getElementById('dynamicMain');
+    mainElement.style.backgroundImage = images_main[currentIndexMain];
+    currentIndexMain = (currentIndexMain + 1) % images_main.length;
+};
+
+// Set different intervals for changing background images
+setInterval(changeBackgroundImageHeader, 1000); // Change header background every 1 seconds
+setInterval(changeBackgroundImageMain, 3000); // Change main background every 3 seconds
 
 });

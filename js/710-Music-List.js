@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //console.log('2-DOM fully loaded and parsed');
 const audioPlayers = document.querySelectorAll('audio');
 //console.log(`Total audio elements found: ${audioPlayers.length}`);
+let isPlaying = true; // Track play/pause status
 let currentTrack = 0; // Index of the currently playing track
 let isShuffle = false; // Shuffle mode status (off by default)
 let repeatMode = 0; // Repeat mode status (0: No Repeat, 1: Repeat One, 2: Repeat All)
@@ -71,15 +72,14 @@ audio.addEventListener('play', () => pauseOtherTracks(index));
 });
 
 document.getElementById('repeatTrack').addEventListener('click', () => {
-    repeatMode = (repeatMode + 1) % 3; // 1 <=> repeat mode ONE, 2 <=> repeat mode All
-    const repeatTexts = ['Repeat', 'Repeat: One', 'Repeat: All'];
-    const repeatClasses = ['repeat-off', 'repeat-one', 'repeat-all']; // Add this line
+    repeatMode = (repeatMode + 1) % 3;
+    const repeatSymbols = ['', '🔂', '🔁'];
+    const repeatTexts = ['OFF', 'ONE', 'ALL'];
     const button = document.getElementById('repeatTrack');
-    button.textContent = repeatTexts[repeatMode];
-
+    button.textContent = repeatSymbols[repeatMode] + ' ' + repeatTexts[repeatMode];
     // Remove all possible classes before adding the new one to avoid conflicts
     button.classList.remove('repeat-off', 'repeat-one', 'repeat-all');
-    button.classList.add(repeatClasses[repeatMode]); // Update the button's class based on the repeat mode
+    button.classList.add('repeat-' + ['off', 'one', 'all'][repeatMode]); // Update the button's class based on the repeat mode
 });
 // Function to get the index of the next track to play
 const getNextTrackIndex = () => {
@@ -105,8 +105,48 @@ const getPreviousTrackIndex = () => {
     // In linear mode, go back to the previous track
     return (currentTrack - 1 + audioPlayers.length) % audioPlayers.length;
 };
-// Event listener for cycling through repeat modes
 
+// Function to toggle play/pause
+const togglePlayPause = () => {
+    if (isPlaying) {
+        // If currently playing, pause all tracks
+        audioPlayers.forEach(audio => audio.pause());
+        isPlaying = false;
+    } else {
+        // If currently paused, play the current track
+        playTrack(currentTrack);
+        isPlaying = true;
+    }
+};
+
+// Event listener for the play/pause button
+document.getElementById('Play').addEventListener('click', togglePlayPause);
+
+const playPauseButton = document.getElementById('Play');
+
+playPauseButton.addEventListener('click', () => {
+    if (audioPlayers[currentTrack].paused) {
+        audioPlayers[currentTrack].play();
+        playPauseButton.textContent = '▶️';//click will play the current track.
+    } else {
+        audioPlayers[currentTrack].pause();
+        playPauseButton.textContent = '⏸️';//click will pause the current track
+    }
+});
+
+// Design CSS for the play/pause button
+const playButton = document.getElementById('Play');
+
+// Function to toggle the "paused" class on the play button
+const togglePausedClass = () => {
+    playButton.classList.toggle('paused');
+};
+
+// Add event listener to the audio elements to toggle the class
+audioPlayers.forEach((audio, index) => {
+    audio.addEventListener('play', () => togglePausedClass());
+    audio.addEventListener('pause', () => togglePausedClass());
+});
 
  // Event listeners for controls
 document.getElementById('nextTrack').addEventListener('click', () => {

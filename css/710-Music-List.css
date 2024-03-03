@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Base styles */
 body {
     font-family: Arial, sans-serif;
@@ -81,6 +79,17 @@ audio {
     color: white;
     border-color: #0056b3;
 }
+#Play{/*state is Play but show on button is paused*/
+    background-color: rgb(205, 50, 50); /* Default color for "Play" */
+    color: white;
+    font-size: 24px;
+}
+
+#Play.paused  { /*state is Pause but show on button is playing*/
+    background-color: rgb(77, 255, 0); /* Color for "Pause" */
+    color: black;
+    font-size: 24px;
+}
 
 /* Default button style */
 button {
@@ -88,6 +97,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 10px;
+    font-size: 24px;
 }
 
 /* Hover effect for buttons */
@@ -100,22 +110,26 @@ button {
 button.active {
     background-color: #4CAF50; /* Green background for active state */
     color: white;
+    font-size: 24px;
 }
 
 /* CSS styles for repeat button */
 .repeat-off {
-    background-color: #ccc; /* Gray for no repeat */
+    background-color: #ff0000; 
     color: white;
+    font-size: 24px;
 }
 
 .repeat-one {
-    background-color: #f44336; /* Red for repeat one */
+    background-color: #b09c9b; 
     color: white;
+    font-size: 24px;
 }
 
 .repeat-all {
-    background-color: #4CAF50; /* Green for repeat all */
+    background-color: #00ff08; 
     color: white;
+    font-size: 24px;
 }
 
 /* Footer styles */

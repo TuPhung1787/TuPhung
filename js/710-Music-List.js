@@ -192,6 +192,12 @@ const images_header = [
     'url(https://tuphung1787.github.io/TuPhung/image/main_1.jpg)',
        // Add as many images as you want, ensure they're wrapped with url()
 ];
+const images_main = [
+    'url(https://tuphung1787.github.io/TuPhung/image/art_6.png)',
+    'url(https://tuphung1787.github.io/TuPhung/image/art_7.png)',
+    'url(https://tuphung1787.github.io/TuPhung/image/art_8.png)',
+       // Add as many images as you want, ensure they're wrapped with url()
+];
 let currentIndex = 0;
 
 const changeBackgroundImage = () => {
@@ -199,7 +205,11 @@ const changeBackgroundImage = () => {
     const headerElement = document.getElementById('dynamicHeader');
     headerElement.style.backgroundImage = images_header[currentIndex];
     currentIndex = (currentIndex + 1) % images_header.length; // Loop back to the first image
-    
+
+    const MainElement = document.getElementById('dynamicMain');
+    MainElement.style.backgroundImage = images_main[currentIndex];
+    currentIndex = (currentIndex + 1) % images_main.length; // Loop back to the first image
+
 };
 
 // Set the interval to change the background image. 1000ms = 1 second

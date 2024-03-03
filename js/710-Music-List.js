@@ -22,6 +22,7 @@ const updateShuffleOrder = () => {
         shuffleOrder.unshift(currentTrack); // Reinsert the current track at the start
     }
 };
+
 // Function to highlight the playing track
 const highlightPlayingTrack = (index) => {
     const tracks = document.querySelectorAll('li');

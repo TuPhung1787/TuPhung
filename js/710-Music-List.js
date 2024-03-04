@@ -74,7 +74,7 @@ audio.addEventListener('play', () => pauseOtherTracks(index));
 
 document.getElementById('repeatTrack').addEventListener('click', () => {
     repeatMode = (repeatMode + 1) % 3;
-    const repeatSymbols = ['🔁', '🔂', '🔁'];
+    const repeatSymbols = ['🔁', '🔂', '🔄'];
     const repeatTexts = ['', 'ONE', 'ALL'];
     const button = document.getElementById('repeatTrack');
     button.textContent = repeatSymbols[repeatMode] + ' ' + repeatTexts[repeatMode];

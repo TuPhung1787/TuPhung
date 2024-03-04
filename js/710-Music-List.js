@@ -74,8 +74,8 @@ audio.addEventListener('play', () => pauseOtherTracks(index));
 
 document.getElementById('repeatTrack').addEventListener('click', () => {
     repeatMode = (repeatMode + 1) % 3;
-    const repeatSymbols = ['', '🔂', '🔁'];
-    const repeatTexts = ['OFF', 'ONE', 'ALL'];
+    const repeatSymbols = ['🔁', '🔂', '🔁'];
+    const repeatTexts = ['', 'ONE', 'ALL'];
     const button = document.getElementById('repeatTrack');
     button.textContent = repeatSymbols[repeatMode] + ' ' + repeatTexts[repeatMode];
     // Remove all possible classes before adding the new one to avoid conflicts

@@ -29,7 +29,7 @@ body {
 
 .middle-row {
   display: flex;
-  justify-content: space-between;
+   justify-content: space-between; /*flexbox */
   gap: 20px;
   padding: 20px;
 }

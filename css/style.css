@@ -13,23 +13,25 @@ body {
 }
 .header {
   background-color: #2196F3; /* Header and footer background color */
+  font-weight: bold; 
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px 0;
   font-size: 69px;
-  background-image: url('../image/header.png'); /* Path to your image */
+  background-image: url('../image/forest_6.jpeg'); /* Path to your image */
   background-size: 100% ; /* Cover the entire page */
   background-position: center; /* Center the background image */
 }
 /* Add the CSS rules for hover effect */
 .header-menu-hover:hover {
-  color: blue; /* Change text color when hovered */
-  background-color: green; /* Change background color when hovered */
+  color: rgb(255, 242, 0); /* Change text color when hovered */
+  background-color: rgb(11, 193, 8); /* Change background color when hovered */
+  transform: scale(1.2);
 }
 
 .middle-row {
   display: flex;
-   justify-content: space-between; /*flexbox */
+  justify-content: space-between; /*flexbox */
   gap: 20px;
   padding: 20px;
 }
@@ -38,14 +40,15 @@ body {
   font-size: 50px; /* Adjust the font size for larger-menu */
   color: white; /* Adjust the color for larger-menu */
   text-align: center; 
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .menu {
   flex-basis: 20%; /* Adjust widths as needed */
-  background-color: #ffffff;
   margin-top: 20px; /* Adjust margin top */
   text-align: center; /* Align menu items to the left */
-  background-image: url('../image/menu_picture.jpeg'); /* Path to your image */
+  background-image: url('../image/forest_3.jpeg'); /* Path to your image */
   background-size: 100% ; /* Cover the entire page */
   background-position: center; /* Center the background image */
 }
@@ -74,7 +77,7 @@ body {
   display: inline-block; /* Allows transform to affect the element */
   align-items: center;
   font-size: 26px; /* Original font size */
-  color: rgb(34, 0, 255);
+  color: rgb(255, 255, 255);
   /* background-color: aqua; */
   text-decoration: underline;
   transition: transform 0.3s ease; /* Smooth transition for scaling */
@@ -101,7 +104,7 @@ body {
   flex-basis: auto;
   gap: 20px; /* Space between grid items */
   padding: 20px; /* Padding around the entire grid */
-  background-image: url('../image/main_1.jpg'); /* Path to your image */
+  background-image: url('../image/forest_6.jpeg'); /* Path to your image */
   background-size: 100% ; /* Cover the entire page */
   background-position: center; /* Center the background image */
 }
@@ -187,5 +190,4 @@ body {
   .grid-main {
     grid-template-columns: 1fr; /* 1 column for mobile phones */
   }
-  
 }

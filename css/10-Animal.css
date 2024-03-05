@@ -3,26 +3,65 @@ body {
 }
 
 .header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px; /* Add padding for better spacing */
+  color: white; /* Text color for the header */
 }
 
-h1 {
-  color: green;
-  font-size: 39px;
-  font-family: 'Arial','Times New Roman',sans-serif;
+.header_1 {
+  font-size: 79px; /* Adjust the font size for the header text */
+  font-weight: bold; /* or any other style you want */
+  text-align: center;
+  color: #330fd3;
+}
+
+.container {
+  display: flex wrap;
+  justify-content: center; /* Center the content horizontally */
+}
+
+.main-column {
+  width: 90%; /* Adjust as needed */
+}
+
+.sidebar {
+  width: 30%; /* Adjust as needed */
+  display: grid-row;
+  align-items: center;
+}
+
+/* Add styles for the buttons */
+button {
+  font-size: 26px;
+  font-weight: bold;;
+  padding: 15px 30px;
+  margin: 10px;
+  background-color: #4caf50; /* Green background color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
 
 .section-title {
   color: green;
-  font-size: 26px;
+  font-size: 46px;
   font-family: 'Times New Roman', 'Arial', serif;
   text-decoration: underline;
+  list-style: none;
 }
 
 .sub-title {
   font-family: 'Times New Roman', 'Arial', serif;
   text-decoration: inherit;
 }
+
 .image-source {
   color: gray;
   font-size: 15px;
@@ -30,23 +69,23 @@ h1 {
 
 .paragraph {
   color: blue;
-  font-family: 'Arial','Times New Roman', sans-serif;
-  font-size: 20px;
+  font-family: 'Arial', 'Times New Roman', sans-serif;
+  font-size: 36px;
   clear: both;
 }
 
 .image {
-  float: left;
-  width: 300px;
+  width: 100%;
   border-style: dotted;
   border-color: azure;
   border-radius: 18px;
-  margin: 0 10px 10px 0;
+  margin: 0 0 10px 0;
 }
+
 .footer {
   background-color: #2196F3; /* Header and footer background color */
   color: white;
-  text-align: left; 
+  text-align: left;
   padding: 20px 0;
   font-size: 25px;
 }
@@ -60,4 +99,14 @@ h1 {
   color: black;
   text-decoration: none;
   font-weight: bold;
+}
+.backlink {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.backlinks:hover {
+  color: blue; /* Change text color when hovered */
+  background-color: yellow; /* Change background color when hovered */
+  transform: scale(1.2);
 }

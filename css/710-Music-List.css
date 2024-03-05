@@ -13,7 +13,7 @@ body {
 /* Header styles */
 .grid-header {
     background-color: #2196F3; /* Header background color */
-    color: rgba(3, 18, 176, 0.764);
+    color: rgb(221, 255, 0);
     text-align: center;
     font-size: 60px;
 }
@@ -24,7 +24,13 @@ body {
     background-color: green; /* Change background color when hovered */
     font-size: 70px;
 }
-
+#dynamicHeader,
+#dynamicMain {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Set the container height to 100% of the viewport height */
+}
 /* Scrollable list styles */
 ul {
     max-height: 100px; /* Set a fixed height or max-height for the list */

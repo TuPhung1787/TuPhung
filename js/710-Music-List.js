@@ -184,14 +184,16 @@ updateShuffleOrder(); // Initialize shuffle order when the page loads
 
 //make the changing images background same as the gif
 const images_header = [
-    'url(https://tuphung1787.github.io/TuPhung/image/menu.png)',
-    'url(https://tuphung1787.github.io/TuPhung/image/main_1.jpg)',
+    'url(https://tuphung1787.github.io/TuPhung/image/forest_2.jpeg)',
+    'url(https://tuphung1787.github.io/TuPhung/image/forest_4.jpeg)',
+    'url(https://tuphung1787.github.io/TuPhung/image/forest_6.jpeg)',
        // Add as many images as you want, ensure they're wrapped with url()
 ];
 const images_main = [
-    'url(https://tuphung1787.github.io/TuPhung/image/art_6.png)',
-    'url(https://tuphung1787.github.io/TuPhung/image/art_7.png)',
-    'url(https://tuphung1787.github.io/TuPhung/image/art_8.png)',
+    'url(https://tuphung1787.github.io/TuPhung/image/lake_2.jpeg)',
+    'url(https://tuphung1787.github.io/TuPhung/image/lake_4.jpeg)',
+    'url(https://tuphung1787.github.io/TuPhung/image/lake_6.jpeg)',
+    'url(https://tuphung1787.github.io/TuPhung/image/lake_10.jpeg)',
        // Add as many images as you want, ensure they're wrapped with url()
 ];
 let currentIndexHeader = 0;
@@ -210,7 +212,7 @@ const changeBackgroundImageMain = () => {
 };
 
 // Set different intervals for changing background images
-setInterval(changeBackgroundImageHeader, 1000); // Change header background every 1 seconds
+setInterval(changeBackgroundImageHeader, 2000); // Change header background every 2 seconds
 setInterval(changeBackgroundImageMain, 3000); // Change main background every 3 seconds
 
 });

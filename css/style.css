@@ -45,7 +45,7 @@ body {
   background-color: #ffffff;
   margin-top: 20px; /* Adjust margin top */
   text-align: center; /* Align menu items to the left */
-  background-image: url('../image/menu.png'); /* Path to your image */
+  background-image: url('../image/menu_picture.jpeg'); /* Path to your image */
   background-size: 100% ; /* Cover the entire page */
   background-position: center; /* Center the background image */
 }
@@ -74,7 +74,8 @@ body {
   display: inline-block; /* Allows transform to affect the element */
   align-items: center;
   font-size: 26px; /* Original font size */
-  color: rgb(51, 255, 0);
+  color: rgb(34, 0, 255);
+  /* background-color: aqua; */
   text-decoration: underline;
   transition: transform 0.3s ease; /* Smooth transition for scaling */
 }

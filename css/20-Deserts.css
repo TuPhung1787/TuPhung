@@ -7,7 +7,6 @@ body {
 
 .container {
   width: 90%;
-  /* max-width: 1200px; */
   flex-basis:auto;
   margin: 0 auto;
   display: flex;
@@ -35,12 +34,6 @@ section {
   align-items: center;
   margin-bottom: 20px;
 }
-/* .only_align_1 {
-  margin: 20px 20px 10px 40px;
-}
-.only_align_2 {
-  margin: 10px 20px 10px 10px;
-} */
 img {
   width: 220px;
   height: 169px;

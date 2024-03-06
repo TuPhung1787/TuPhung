@@ -28,8 +28,6 @@
         <p class="sub-title image-source">Source: <a href="https://redpandanetwork.org/post/12-ways-red-pandas-are-unique-and-cutei">Red Panda</a></p>
       </section>
 
-      <!-- Repeat the structure for other sections -->
-
       <section>
         <h2 class="section-title"><li><a href="https://marinesanctuary.org/blog/sea-otter-fun-facts/">Sea Otter</a></li></h2>
         <img class="image" src="image/12-Sea_Otter.jpg" alt="Sea Otter" />
@@ -79,34 +77,7 @@
     <p><u><em>Email:</em></u> tu.phung@myy.haaga-helia.fi&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<u><em>Phone:</em></u> +358 45 234 9495&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<u><em>Address: </em></u>369 Malminkatano, 00410 Helsinki, Finland</p>
     <p><a href="index.html"><u>Back to the main page</u></a></p>
   </div>
-
-  <script>
-    // JavaScript to handle section navigation
-    let currentSection = 0; // Initialize current section index
-
-    function showSection(offset) {
-  // Show the next or previous section based on the offset
-  currentSection += offset;
-
-  const sections = document.getElementById('animalSections').getElementsByTagName('section');
-
-  // Ensure the index stays within bounds
-  if (currentSection < 0) {
-    currentSection = sections.length - 1; // If at the beginning, go to the last section
-  } else if (currentSection >= sections.length) {
-    currentSection = 0; // If at the end, go to the first section
-  }
-
-  // Hide all sections
-  Array.from(sections).forEach(section => section.style.display = 'none');
-
-  // Show the current section
-  sections[currentSection].style.display = 'block';
-}
-
-    // Show the first section initially
-    showSection(0);
-  </script>
+<script src="js/10-Animal.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,6 @@
+**Main Page**|<-------------> **My Favorite Animals** (add the javascript for change to content) (**JavaScript + HTLM + CSS**)
+(HTLM + CSS) |<-------------> **My Favorite Deserts** (HTLM + CSS)
+             |<------------->Coding (just link to the page)
+             |<------------->**Entertainment** <------------->**Listening** (Javascript for playing the musice with 5 functions (Previous, Play/Pause, Next, Shuffle, Repeat) and auto scroll for the playing song) (**JavaScript + HTLM + CSS**)
+             |<------------->Studying (just link to the page)
+             |<------------->Studying (just link to the page)

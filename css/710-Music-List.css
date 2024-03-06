@@ -2,12 +2,11 @@
 body {
     font-family: Arial, sans-serif;
 }
-
-/* Grid layout */
 .grid-page {
     display: grid;
     height: 100vh;
     grid-template-rows: 100px 1fr 100px; /* Fixed height header and footer */
+    grid-gap: 10px; /* Add a 10px gap between grid items */
 }
 
 /* Header styles */
@@ -16,26 +15,42 @@ body {
     color: rgb(221, 255, 0);
     text-align: center;
     font-size: 60px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
+/* Main content styles */
+.grid-main {
+    gap: 10px; /* Add a 10px gap between grid items */
+}
 /* Hover effect for header */
 .header-hover:hover {
     color: blue; /* Change text color when hovered */
     background-color: green; /* Change background color when hovered */
     font-size: 70px;
 }
-#dynamicHeader,
+#dynamicHeader {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Set the container height to 100% of the viewport height */
+    margin-bottom: 10px; /* Add margin at the bottom to create space */
+}
+
 #dynamicMain {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh; /* Set the container height to 100% of the viewport height */
 }
+
 /* Scrollable list styles */
 ul {
-    max-height: 100px; /* Set a fixed height or max-height for the list */
-    overflow-y: auto; /* Enable scrolling */
+    max-height: 120px; /* Set a fixed height or max-height for the list */
+    overflow-y: scroll; /* Enable scrolling */
     list-style: none; /* Remove bullet points */
+    margin: 0 20px 10px 0px;
+    align-items: center;;
 }
 
 /* Scrollbar styles */
@@ -59,9 +74,8 @@ ul::-webkit-scrollbar-thumb:hover {
 li {
     background-color: #f9f9f9; /* Light grey background */
     color: black; /* Black text for visibility */
-
-    margin:10px 0px 0px 0px; 
-    padding: 0px;
+    margin-bottom: 10px;
+    padding: 10px;
     border-radius: 15px;
 }
 
@@ -90,7 +104,7 @@ audio {
 .playing {
     background-color: #4CAF50; /* Green background for active state */
     color: black; /* Ensuring text is readable on the green background */
-    border-left: 5px solid #2196F3; /* Add a left border for more emphasis */
+    border-left: 5px solid auto; /* Add a left border for more emphasis */
 }
 
 #Play.paused{/*state is Play but show on button is paused*/
@@ -176,7 +190,7 @@ button.active {
 
 /* Footer paragraph styles */
 .footer p {
-    margin: 5px 0;
+    margin: 0 0 5px 5px;
     font-size: 27px;
 }
 
@@ -185,6 +199,7 @@ button.active {
     color: black;
     text-decoration: none;
     font-weight: bold;
+    margin:10px 0 0 5px;
 }
 
 /* Hover effect for footer */

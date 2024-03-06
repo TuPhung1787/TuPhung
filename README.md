@@ -1,30 +1,33 @@
-# My Main Page link to 6 pages as below via 3 ways (The Content and Icon in Menu, The 6 big Pictures)
+Welcome to My Website - Tervetuloa!
+Welcome to my user-friendly website, designed to showcase various sections using a mix of CSS styles such as Grid, Flex, ul, class, ID, hover effects, and more. Explore the content through two main navigation methods: the menu icons and the six large pictures.
 
-Welcome to My Website - Tervetuloa! This is a simple and user-friendly website showcasing various sections. 
-   (**CSS**: apply Grid, Flex, ul, class, ID,hover... show almost all attributes)
+Sections
+My Favorite Animals Page
 
-## Sections
+Discover a curated collection of my favorite animals, presented with an aesthetically pleasing design.
+CSS: Utilizes Grid, Flex, class, ID, and hover effects for an engaging visual experience.
+JavaScript: Implements functions for navigating through content with Next and Previous buttons.
+My Favorite Deserts Page
 
-1. **My Favorite Animals Page**
-   - Explore a collection of my favorite animals.
-       (**CSS**: apply Grid, Flex, class, ID,hover... show almost all attributes)
-       (**JavaScript**: showing for one content with 2 functions Next & Previous)
-2. **My Favorite Deserts Page**
-   - Discover a variety of delicious deserts.
-       (**CSS**: apply Flex, class, ID... make the websit look like simple.)
-3. **Coding Page** https://www.dataquest.io/
-   - Studying the Coding focus on Data.
-4. **Relaxing Page** (link to the Listening page via the Listening Picture)
-     (**CSS**: apply Flex, class, ID... make the websit look like simple.)
-   - Enjoy entertainment and relaxation
-       **Listening Page**: go to enjoying music
-          (**CSS**: apply Grid, Flex, class, ID,hover... show almost all attributes)
-          (**JavaScript**: play music with 5 main functions (Previous, Play-Pause, Next, Shuffle, Repeat) + some visual effects (auto scroll to the playing song, changing the background image) 
-6. **Studying Page** 
-   - Access helpful study materials on (https://stackskills.com/) and (https://chat.openai.com/).
+Indulge in a variety of delicious desserts showcased in a simple and appealing layout.
+CSS: Applies Flex, class, ID, and other styling for a clean and straightforward presentation.
+Coding Page
 
-## Contact Information
+Dive into the world of coding with a focus on data at DataQuest.
+Relaxing Page
 
-- **Email:** tu.phung@myy.haaga-helia.fi
-- **Phone:** +358 45 234 9495
-- **Address:** 369 Malminkatano, 00410 Helsinki, Finland
+Enjoy entertainment and relaxation, linking to the Listening Page via the Listening Picture.
+
+CSS: Uses Flex, class, ID, and other styling for a soothing and uncomplicated design.
+Listening Page
+
+Immerse yourself in a musical journey with functionalities like Previous, Play-Pause, Next, Shuffle, and Repeat.
+CSS: Showcases Grid, Flex, class, ID, hover effects, and other attributes.
+JavaScript: Enhances the experience with features like auto-scrolling to the playing song and changing background images.
+Studying Page
+
+Access valuable study materials at StackSkills and OpenAI Chat.
+Contact Information
+Email: tu.phung@myy.haaga-helia.fi
+Phone: +358 45 234 9495
+Address: 369 Malminkatano, 00410 Helsinki, Finland

@@ -1,26 +1,26 @@
-# Welcome to My Website - Tervetuloa!
+# Welcome to [My Website](https://tuphung1787.github.io/TuPhung/) - Tervetuloa! 
 
 This user-friendly website showcases various sections using CSS styles such as Grid, Flex, ul, class, ID, hover effects, and more. Explore the content through two main navigation methods: the menu icons and the six large pictures.
 
 ## Sections
 
-1. **My Favorite Animals Page**
+1. **[My Favorite Animals Page](https://tuphung1787.github.io/TuPhung/10-Animal.html)** 
    - Explore a curated collection of my favorite animals.
      - **CSS**: Grid, Flex, class, ID, and hover effects.
      - **JavaScript**: Next and Previous buttons.
 
-2. **My Favorite Deserts Page**
+2. **[My Favorite Deserts Page](https://tuphung1787.github.io/TuPhung/20-Deserts.html)**
    - Indulge in a variety of delicious desserts with a clean and appealing layout.
      - **CSS**: Flex, class, ID.
 
 3. **Coding Page**
    - Dive into coding with a focus on data at [DataQuest](https://www.dataquest.io/).
 
-4. **Relaxing Page**
+4. **[Relaxing Page](https://tuphung1787.github.io/TuPhung/70-Entertainment.html)**
    - Enjoy entertainment and relaxation, linking to the Listening Page via the Listening Picture.
      - **CSS**: Flex, class, ID.
 
-   4.1 **Listening Page**
+   4.1 **[Listening Page](https://tuphung1787.github.io/TuPhung/710-Music-List.html)**
      - Immerse yourself in a musical journey with functionalities like Previous, Play-Pause, Next, Shuffle, and Repeat.
      - **CSS**: Grid, Flex, class, ID, hover effects.
      - **JavaScript**: Auto-scrolling and background image changes.

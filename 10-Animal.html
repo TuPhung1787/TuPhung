@@ -85,20 +85,24 @@
     let currentSection = 0; // Initialize current section index
 
     function showSection(offset) {
-      // Show the next or previous section based on the offset
-      currentSection += offset;
+  // Show the next or previous section based on the offset
+  currentSection += offset;
 
-      const sections = document.getElementById('animalSections').getElementsByTagName('section');
+  const sections = document.getElementById('animalSections').getElementsByTagName('section');
 
-      // Ensure the index stays within bounds
-      currentSection = Math.min(Math.max(currentSection, 0), sections.length - 1);
+  // Ensure the index stays within bounds
+  if (currentSection < 0) {
+    currentSection = sections.length - 1; // If at the beginning, go to the last section
+  } else if (currentSection >= sections.length) {
+    currentSection = 0; // If at the end, go to the first section
+  }
 
-      // Hide all sections
-      Array.from(sections).forEach(section => section.style.display = 'none');
+  // Hide all sections
+  Array.from(sections).forEach(section => section.style.display = 'none');
 
-      // Show the current section
-      sections[currentSection].style.display = 'block';
-    }
+  // Show the current section
+  sections[currentSection].style.display = 'block';
+}
 
     // Show the first section initially
     showSection(0);

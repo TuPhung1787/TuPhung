@@ -3,14 +3,25 @@ body {
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #333; /* Change link color */
+  margin: 10px 0 0 10px; /* Add margin for spacing */
+  align-self:flex-start;
 }
 
 header {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 3px;
-  font-size:46px;
+  padding: 15px;
+  font-size: 69px;
+  width: 100%;
 }
 
 .activity {
@@ -19,29 +30,36 @@ header {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
 }
 
 img {
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
 .footer {
-  background-color: #2196F3; /* Header and footer background color */
+  background-color: #2196F3;
   color: white;
-  text-align: left; 
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
   padding: 20px 0;
   font-size: 25px;
+  width: 99%;
 }
 
 .footer p {
   margin: 5px 0;
   font-size: 27px;
+  align-self: center; /* Center items horizontally */
+  text-align: center;
 }
 
 .footer a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
+  margin: 5px 0 0 10px;
+  font-size: 27px;
+  align-self: flex-start;
+  justify-content: flex-start;
+  text-align: left;
 }

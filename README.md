@@ -9,15 +9,17 @@ Page 6|<------------->Studying (just link to the page)
 # My Main Page link to 6 pages as below via 3 ways (The Content and Icon in Menu, The 6 big Pictures)
 
 Welcome to My Website - Tervetuloa! This is a simple and user-friendly website showcasing various sections. 
+   (**CSS**: apply Grid, Flex, ul, class, ID,hover... show almost all attributes)
 
 ## Sections
 
 1. **My Favorite Animals**
    - Explore a collection of my favorite animals.
- 
+ (**CSS**: apply Grid, Flex, class, ID,hover... show almost all attributes)
+ (**JavaScript**: showing for one content with 2 functions Next & Previous)
 2. **My Favorite Deserts**
    - Discover a variety of delicious deserts.
-   
+   (**CSS**: apply Flex, class, ID... make the websit look like simple.)
 3. **Coding**
      
 4. **Relaxing**

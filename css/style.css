@@ -1,6 +1,6 @@
 /* Add custom styles here */
 body {
-  background-color: #353839; /* Light gray background #232b2b #0e1111 */
+  background-color: #0e1111; /* 	#232b2b #353839 #3b444b Light gray background #232b2b #0e1111 */
   font-family: Arial, sans-serif; /* Use a common font for better cross-browser compatibility */
   margin: 0;
   padding: 0;
@@ -12,21 +12,20 @@ body {
   min-height: 100vh;
 }
 .header {
-  background-color: #2196F3; /* Header and footer background color */
+  background-color: #232b2b; /* Header and footer background color */
   font-weight: bold; 
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 10px 0;
   font-size: 69px;
-  background-image: url('../image/forest_6.jpeg'); /* Path to your image */
+  background-image: url('../image/bwg11.webp'); /* Path to your image */
   background-size: 100% ; /* Cover the entire page */
   background-position: center; /* Center the background image */
 }
 
 /* Add the CSS rules for hover effect */
 .header-menu-hover:hover {
-  color: rgb(255, 242, 0); /* Change text color when hovered */
-  background-color: rgb(11, 193, 8); /* Change background color when hovered */
+  color: #3b444b; /* Change text color when hovered */
   transform: scale(1.2);
 }
 
@@ -37,68 +36,48 @@ body {
   padding: 0px 10px 10px 10px;
 }
 
-.larger-menu {
-  font-size: 50px; /* Adjust the font size for larger-menu */
-  color: white; /* Adjust the color for larger-menu */
+.menu {
+  font-size: 10px; /* Adjust the font size for larger-menu */
+  color: rgb(0, 0, 0); /* Adjust the color for larger-menu */
+  background-color: none;
   text-align: center; 
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.menu {
   flex-basis: 25%; /* Adjust widths as needed */
   margin-top: 10px; /* Adjust margin top */
-  text-align: center; /* Align menu items to the left */
-  background-image: url('../image/forest_3.jpeg'); /* Path to your image */
+  background-image: url('../image/bwg8.webp'); /* Path to your image */
   background-size: cover; /* or 100% 100% */
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.menu ul {
-  display: flex; /* Use flexbox to align items */
-  flex-direction: column; /* Align items vertically */
-  align-items: flex-start; /* Align items vertically */
-  list-style: none; /* Remove default list styles */
-  margin: 0 0 10px 30px; /* Adjust spacing between items */
-  padding: 0;
+.menu select {
+  /* Define styles for the dropdown button */
+  color: rgb(200, 200, 200);
+  background-color: #353839; /* Background color */
+  margin-top: 5px;
+  font-size: 32px; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border: 4px rgba(0, 0, 0, 0.8);
+  width: 210px; 
+  border-radius: 50px;
 }
 
-.menu ul a {
-  display: flex; /* Use flexbox for link items */
-  align-items: center; /* Align items vertically */
-  text-decoration: none; /* Remove default underline */
+/* Style for the options */
+.menu select option {
+  /* Define styles for each option */
+  background-color: #353839; /* Background color */
+  color: rgb(199, 199, 199); /* Text color */
+  text-align: center;
+  margin: 0 10px 0 0;
+  font-size: 32px; /* Set font size */
+  border-radius: 50px;
 }
 
-.menu ul a img {
-  margin-right: 10px; /* Adjust spacing between image and text */
-  font-size: 24px;
+/* Hover effect for options */
+.menu select option:hover {
+  background-color: #ffffff; /* Change background color on hover */
 }
 
-.text-icon {
-  display: inline-block; /* Allows transform to affect the element */
-  align-items: center;
-  font-size: 26px; /* Original font size */
-  color: rgb(255, 255, 255);
-  /* background-color: aqua; */
-  text-decoration: underline;
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
-}
-
-.text-icon:hover {
-  transform: scale(1.2); /* Enlarge text on hover */
-  color: #000; /* Optional: Change color on hover */
-  text-decoration: none; /* Optional: Remove underline on hover */
-}
-.text-icon:hover em {
-  color:blueviolet;
-  background-color: yellow; 
-}
-
-.text-icon img {
-  margin-right: 5px; /* Adjust spacing between image and text */
-  color: blue; /* Adjust the color for text-icon */
-}
 /* Styles exclusively for elements inside .grid-main */
 .grid-main {
   width:75%;
@@ -107,7 +86,7 @@ body {
   margin: 10px 0 0px 0px;
   gap: 0px; /* Space between grid items */
   padding: 10px; /* Padding around the entire grid */
-  background-image: url('../image/forest_6.jpeg'); /* Path to your image */
+  background-image: url('../image/bwg9.webp'); /* Path to your image */
   background-size: 100% ; /* Cover the entire page */
   background-position: center; /* Center the background image */
 }
@@ -148,8 +127,8 @@ body {
 
 /* Styles for center-aligned images */
 .footer {
-  background-color: #2196F3; /* Header and footer background color */
-  color: white;
+  background-color: #232b2b; /* Header and footer background color */
+  color: black;
   text-align: left; 
   padding: 20px 0;
   font-size: 25px;
@@ -162,13 +141,12 @@ body {
 
 .footer a {
   color: black;
-  text-decoration: none;
   font-weight: bold;
 }
 
 .footer-hover:hover {
-  color: blue; /* Change text color when hovered */
-  background-color: yellow; /* Change background color when hovered */
+  color: white; /* Change text color when hovered */
+  background-color: #353839; /* Change background color when hovered */
   /* Add any other styles you want to apply when hovered */
 }
 

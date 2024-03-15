@@ -1,6 +1,6 @@
 /* Add custom styles here */
 body {
-  background-color: #0e1111; /* 	#232b2b #353839 #3b444b Light gray background #232b2b #0e1111 */
+  background-color: #0e1111; /* 	#232b2b #353839 #3b444b  #000000 	#111111 #1e1e1e #3c3c3c  #4d4d4d Light gray background */
   font-family: Arial, sans-serif; /* Use a common font for better cross-browser compatibility */
   margin: 0;
   padding: 0;
@@ -45,7 +45,7 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   flex-basis: 25%; /* Adjust widths as needed */
   margin-top: 10px; /* Adjust margin top */
-  background-image: url('../image/bwg8.webp'); /* Path to your image */
+  background-image: url('../image/bwg12.webp'); /* Path to your image */
   background-size: cover; /* or 100% 100% */
   background-position: center;
   background-repeat: no-repeat;
@@ -109,9 +109,8 @@ body {
 .image-main {
   width: 300px; /* Maximum original width */
   height: 200px; /* Make the image width responsive to the container size */
-  border: 4px dotted rgba(0, 0, 0, 0.8);
   border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color:	#3c3c3c;
   margin-bottom: 10px; /* Adjust margin for better spacing */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds depth with shadow */
 }

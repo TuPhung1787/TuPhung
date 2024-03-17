@@ -8,25 +8,8 @@ body {
  
 .grid-page {
   display: grid;
-  grid-template-rows: auto auto auto; /* Header, middle content, footer */
+  grid-template-rows: auto; /* Header, middle content, footer */
   min-height: 100vh;
-}
-.header {
-  background-color: #232b2b; /* Header and footer background color */
-  font-weight: bold; 
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 10px 0;
-  font-size: 69px;
-  background-image: url('../image/bwg11.webp'); /* Path to your image */
-  background-size: 100% ; /* Cover the entire page */
-  background-position: center; /* Center the background image */
-}
-
-/* Add the CSS rules for hover effect */
-.header-menu-hover:hover {
-  color: #3b444b; /* Change text color when hovered */
-  transform: scale(1.2);
 }
 
 .middle-row {
@@ -39,16 +22,21 @@ body {
 .menu {
   font-size: 10px; /* Adjust the font size for larger-menu */
   color: rgb(0, 0, 0); /* Adjust the color for larger-menu */
+  display: grid;
+  grid-template-rows: 90% 10%;
   background-color: none;
   text-align: center; 
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   flex-basis: 25%; /* Adjust widths as needed */
   margin-top: 10px; /* Adjust margin top */
-  background-image: url('../image/bwg12.webp'); /* Path to your image */
+  background-image: url('../image/bwg11.webp'); /* Path to your image */
   background-size: cover; /* or 100% 100% */
   background-position: center;
   background-repeat: no-repeat;
+}
+.select_menu {
+  grid-column: 1; /* Position select_menu in the first column */
 }
 .menu select {
   /* Define styles for the dropdown button */
@@ -76,25 +64,60 @@ body {
 /* Hover effect for options */
 .menu select option:hover {
   background-color: #ffffff; /* Change background color on hover */
+  /* transform: scale(1.05);  doesn't effect????*/
+}
+/* Add the CSS rules for hover effect */
+.select_menu-hover:hover {
+  color: #3b444b; /* Change text color when hovered */
+  transform: scale(1.2);
+}
+/* Styles for center-aligned images */
+.footer {
+  /* background-color: #232b2b; Header and footer background color */
+  color: black;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0;
+  font-size: 16px;
 }
 
+.footer p {
+  margin: 5px 0 10px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  margin-top: auto; /* Keep the paragraph at the bottom */
+}
+
+.footer a {
+  color: black;
+  font-weight: bold;
+}
+
+.footer:hover p{
+  color: rgb(143, 143, 143); /* Change text color when hovered */
+  background-color: #353839; /* Change background color when hovered */
+  transform: scale(1.1); /* Increase size by 20% when hovered */
+  /* Add any other styles you want to apply when hovered */
+}
 /* Styles exclusively for elements inside .grid-main */
 .grid-main {
-  width:75%;
+  width: 75%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(350px, 1fr)); /* Create as many columns as needed, each at least 300px wide */
-  margin: 10px 0 0px 0px;
-  gap: 0px; /* Space between grid items */
-  padding: 10px; /* Padding around the entire grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width */
+  gap: 10px; /* Add some space between grid items */
+  padding: 10px; /* Add padding around the entire grid */
   background-image: url('../image/bwg9.webp'); /* Path to your image */
-  background-size: 100% ; /* Cover the entire page */
+  background-size: cover; /* Cover the entire page */
   background-position: center; /* Center the background image */
 }
 
 /* Targeting anchor tags that directly contain an image with class .image-main */
 .grid-image-main {
   background-color: rgba(255, 255, 255, 0);
-  margin: 20px 0 0 0px;
+  margin: 50px 0 0 0px;
   padding: 20px;
   font-size: 30px; /* Adjust based on content */
   text-align: center;
@@ -124,30 +147,7 @@ body {
   float: center;
 }
 
-/* Styles for center-aligned images */
-.footer {
-  background-color: #232b2b; /* Header and footer background color */
-  color: black;
-  text-align: left; 
-  padding: 20px 0;
-  font-size: 25px;
-}
 
-.footer p {
-  margin: 5px 0 10px;
-  font-size: 27px;
-}
-
-.footer a {
-  color: black;
-  font-weight: bold;
-}
-
-.footer-hover:hover {
-  color: white; /* Change text color when hovered */
-  background-color: #353839; /* Change background color when hovered */
-  /* Add any other styles you want to apply when hovered */
-}
 
 @media (max-width: 768px) {
   .grid-main {

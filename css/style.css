@@ -1,7 +1,7 @@
 /* Add custom styles here */
 body {
   background-color: #0e1111; /* 	#232b2b #353839 #3b444b  #000000 	#111111 #1e1e1e #3c3c3c  #4d4d4d Light gray background */
-  font-family: Arial, sans-serif; /* Use a common font for better cross-browser compatibility */
+  font-family: courier, serif;; /* Use a common font for better cross-browser compatibility */
   margin: 0;
   padding: 0;
 }

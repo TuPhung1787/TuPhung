@@ -1,6 +1,6 @@
 # Welcome to [My Website](https://tuphung1787.github.io/TuPhung/) - Tervetuloa! 
 
-This user-friendly website showcases various sections using CSS styles such as Grid, Flex, ul, class, ID, hover effects, and more. Explore the content through two main navigation methods: the menu icons and the six large pictures.
+This user-friendly website showcases various sections using CSS styles such as Grid, Flex, ul, class, ID, hover effects, and more. Explore the content through **two main navigation methods**: the **Drop Down menu** & the six large **pictures**.
 
 ## Sections
 
@@ -13,7 +13,7 @@ This user-friendly website showcases various sections using CSS styles such as G
    - Indulge in a variety of delicious desserts with a clean and appealing layout.
      - **CSS**: Flex, class, ID.
 
-3. **Coding Page**
+3. **[Coding Page](https://www.dataquest.io/)**
    - Dive into coding with a focus on data at [DataQuest](https://www.dataquest.io/).
 
 4. **[Relaxing Page](https://tuphung1787.github.io/TuPhung/70-Entertainment.html)**

@@ -10,6 +10,7 @@ body {
   display: grid;
   grid-template-rows: auto; /* Header, middle content, footer */
   min-height: 100vh;
+  margin-top: 10px;
 }
 
 .middle-row {
@@ -28,8 +29,7 @@ body {
   text-align: center; 
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  flex-basis: 25%; /* Adjust widths as needed */
-  margin-top: 10px; /* Adjust margin top */
+  flex-basis: 20%; /* Adjust widths as needed */
   background-image: url('../image/bwg11.webp'); /* Path to your image */
   background-size: cover; /* or 100% 100% */
   background-position: center;
@@ -103,7 +103,7 @@ body {
 }
 /* Styles exclusively for elements inside .grid-main */
 .grid-main {
-  width: 75%;
+  flex-basis: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width */
   gap: 10px; /* Add some space between grid items */
@@ -137,25 +137,63 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds depth with shadow */
 }
 
-/* Additional styles for icon images */
-.image-main-icon {
-  width: 50px; /* Set the width of the icon */
-  height: 40px; /* Auto adjust height to maintain aspect ratio */
-  margin: 3px 0px 3px 0px;
-  text-align: left; /* Align icon images to the left */
-  float: center;
-}
-
-
 
 @media (max-width: 768px) {
-  .grid-main {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets and similar devices */
+  .image-main {
+    width: 200px; /* Maximum original width */
+    height: 135px; /* Make the image width responsive to the container size */
+    border-radius: 30px;
+    background-color: #3c3c3c;
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds depth with shadow */
+  }
+  .menu select {
+    /* Define styles for the dropdown button */
+    color: rgb(200, 200, 200);
+    background-color: #353839; /* Background color */
+    margin-top: 5px;
+    font-size: 20px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 4px rgba(0, 0, 0, 0.8);
+    border-radius: 50px;
+  }
+  .menu select option {
+    /* Define styles for each option */
+    background-color: #353839; /* Background color */
+    color: rgb(199, 199, 199); /* Text color */
+    text-align: left;
+    margin: 0 10px 0 0;
+    font-size: 20px; /* Set font size */
+    border-radius: 30px;
   }
 }
 
-@media (max-width: 480px) {
-  .grid-main {
-    grid-template-columns: 1fr; /* 1 column for mobile phones */
+ @media (max-width: 480px) {
+  .image-main {
+    width: 150px; /* Maximum original width */
+    height: 100px; /* Make the image width responsive to the container size */
+    border-radius: 10px;
+    background-color: #3c3c3c;
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds depth with shadow */
+  }
+  .menu select {
+    /* Define styles for the dropdown button */
+    color: rgb(200, 200, 200);
+    background-color: #353839; /* Background color */
+    margin-top: 5px;
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 4px rgba(0, 0, 0, 0.8);
+    border-radius: 50px;
+  }
+  .menu select option {
+    /* Define styles for each option */
+    background-color: #353839; /* Background color */
+    color: rgb(199, 199, 199); /* Text color */
+    text-align: left;
+    margin: 0 10px 0 0;
+    font-size: 16px; /* Set font size */
+    border-radius: 20px;
   }
 }
